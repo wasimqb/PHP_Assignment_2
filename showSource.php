@@ -1,2 +1,3 @@
 <?php
-show_source("test.php");
+$file = $_GET['file'];
+show_source($file);
