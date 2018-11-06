@@ -8,7 +8,7 @@ if (filter_var($url, FILTER_VALIDATE_URL) === false) {
     echo 'Host : ' . $url['host'] . "\n";
     if (!empty($url['path'])) {
         echo 'Path : ' . $url['path'] . "\n";
-    }else{
+    } else {
         echo "Path : Path not specified";
     }
 }
