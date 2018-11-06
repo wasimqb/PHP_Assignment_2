@@ -4,11 +4,12 @@ To convert word to digit and vice versa
 */
 
 //Function to convert words to digits
-function wordToDigit($word) {
-    $warr = explode(':',$word);
+function wordToDigit($word)
+{
+    $warr = explode(':', $word);
     $result = '';
-    foreach($warr as $value){
-        switch(trim($value)){
+    foreach ($warr as $value) {
+        switch (trim($value)) {
             case 'zero':
                 $result .= '0';
                 break;
@@ -38,18 +39,19 @@ function wordToDigit($word) {
                 break;
             case 'nine':
                 $result .= '9';
-                break;    
+                break;
         }
     }
     return $result;
 }
 
-//Function to convert digits to words. 
-function digitToWord($num) {
+//Function to convert digits to words.
+function digitToWord($num)
+{
     $result = '';
-    while($num>1){
+    while ($num>1) {
         $rem = $num % 10;
-        switch($rem){
+        switch ($rem) {
             case 0:
                 $result = 'zero:'.$result;
                 break;
@@ -79,7 +81,7 @@ function digitToWord($num) {
                 break;
             case 9:
                 $result = 'nine:'.$result;
-                break;    
+                break;
         }
         $num = $num/10;
     }
@@ -88,5 +90,4 @@ function digitToWord($num) {
 
 echo "Words to Digit - ".wordToDigit("six:eight:one:five:zero")."<br>";
 echo "Words to Digit - ".wordToDigit("one:one:one")."<br>";
-echo "Digits to words - ".trim(digitToWord(1234),':')."<br>";
-?>
+echo "Digits to words - ".trim(digitToWord(1234), ':')."<br>";
